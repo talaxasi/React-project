@@ -1,0 +1,14 @@
+.filter-group {
+	display: flex;
+	flex: 1 1 100%;
+	align-items: center;
+	margin-left: 1%;
+}
+
+.buttons {
+	margin: 0 10px;
+}
+
+.button-filter {
+	margin: 0 5px;
+}
