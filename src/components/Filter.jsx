@@ -1,19 +1,15 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import '../styles/filter.css'
-import { setFilter } from '../actions/setfilter';
 
-export default function Filter(props) {
-	let books = props.books
-	const filterBooks = props.filterBooks
-
+export default function Filter({ value, onChange }) {
 	return (
 		< div className='filter-group' >
 			<p>Сортировать по:</p>
 			<div className="buttons">
-				<button className="button-filter" onClick={filterBooks.bind(null, 'price-high')} >
+				<button className="button-filter" onClick={() => onChange("price-high")} >
 					Цене (возрвствнию)
 				</button>
-				<button className="button-filter" onClick={filterBooks.bind(null, 'price-low')} >
+				<button className="button-filter" onClick={() => onChange("price-low")} >
 					Цене (убыванию)
 				</button>
 				<button className="button-filter" name="author" >Автору</button>

@@ -19,8 +19,14 @@ const useStyles = makeStyles({
   },
 });
 
-const BookCard = ({author, image, price, title, rating}) => {
+type Props = {
+  book: Book
+
+}
+
+const BookCard = ({ book }) => {
   const classes = useStyles();
+  const { ... } = book;
 
   return (
     <Card className={classes.root}>
