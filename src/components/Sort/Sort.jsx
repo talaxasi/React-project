@@ -1,24 +1,15 @@
-import React, { useState } from 'react';
-import './Sort.css'
+import React from 'react';
+import './Sort.css';
+import { buttons } from './buttons';
 
 export default function Filter(props) {
-	const [active, setActive] = useState('')
-	const onChange = props.onChange
+	const { value } = props;
+	const { onChange } = props;
 
-	const buttons = [
-		{ name: 'price-high', value: 'Цене (возрастанию)' },
-		{ name: 'price-low', value: 'Цене (убыванию)' },
-		{ name: 'author', value: 'Автору' },
-		{ name: 'title', value: 'Названию' },
-		{ name: 'none', value: 'Сброс фильтра' }
-	]
-
-	const setBtnActive = (e) => {
-		const that = e.target
-		onChange(that.name);
-		setActive(that.name)
-	}
-	// console.log(active)
+	const setBtnActive = e => {
+		const btn = e.target.closest('button');
+		if(btn) onChange(e.target.name);
+	};
 
 	return (
 		< div className='filter-group' >
@@ -26,10 +17,12 @@ export default function Filter(props) {
 			<div className="buttons" onClick={setBtnActive}>
 				{buttons.map(btn => (
 					<button
-						className={active === btn.name ? 'button-filter active' : 'button-filter'}
-						name={btn.name}
-						key={btn.name} >
-						{btn.value}
+						className={value === btn.value
+							? 'button-filter active'
+							: 'button-filter'}
+						name={btn.value}
+						key={btn.value} >
+						{btn.title}
 					</button>
 				))}
 			</div>
