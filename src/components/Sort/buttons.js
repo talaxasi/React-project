@@ -3,5 +3,5 @@ export const buttons = [
     { value: 'price-low', title: 'Цене (убыванию)' },
     { value: 'author', title: 'Автору' },
     { value: 'title', title: 'Названию' },
-    { value: 'none', title: 'Сброс фильтра' }
+    { value: undefined, title: 'Сброс фильтра' }
 ]

@@ -7,21 +7,21 @@ export default function Filter(props) {
 	const { onChange } = props;
 
 	const setBtnActive = e => {
-		const btn = e.target.closest('button');
-		if(btn) onChange(e.target.name);
+		onChange(e.target.name);
 	};
 
 	return (
 		< div className='filter-group' >
 			<p>Сортировать по:</p>
-			<div className="buttons" onClick={setBtnActive}>
+			<div className="buttons">
 				{buttons.map(btn => (
 					<button
 						className={value === btn.value
 							? 'button-filter active'
 							: 'button-filter'}
 						name={btn.value}
-						key={btn.value} >
+						onClick={setBtnActive}
+						key={btn.title} >
 						{btn.title}
 					</button>
 				))}
