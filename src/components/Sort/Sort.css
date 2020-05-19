@@ -12,3 +12,8 @@
 .button-filter {
 	margin: 0 5px;
 }
+
+.active {
+	background-color: #666;
+	color: white;
+}

@@ -19,8 +19,9 @@ const useStyles = makeStyles({
   },
 });
 
-const BookCard = ({author, image, price, title, rating}) => {
+const BookCard = ({book}) => {
   const classes = useStyles();
+  const {image, title, author, price, rating} = book;
 
   return (
     <Card className={classes.root}>
@@ -51,4 +52,4 @@ const BookCard = ({author, image, price, title, rating}) => {
   );
 }
 
-export default BookCard
+export default BookCard;
