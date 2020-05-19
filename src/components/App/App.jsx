@@ -42,9 +42,8 @@ class App extends React.Component {
   }
 
   render() {
-    const { books} = this.state;
-    const { value } = this.state;
-    let filteredBooks;
+      const { value, books } = this.state;
+      let filteredBooks;
     if (books) filteredBooks = sort(books, value);
     return (
       <div className="App">
