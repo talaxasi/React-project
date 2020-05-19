@@ -24,10 +24,7 @@ const sort = (books, filter) => {
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      books: [],
-      value: ''
-    };
+    this.state = {};
   }
 
   componentDidMount() {
@@ -43,8 +40,10 @@ class App extends React.Component {
 
   render() {
       const { value, books } = this.state;
-      let filteredBooks;
-    if (books) filteredBooks = sort(books, value);
+      if (!books) {
+          return 'Загрузка...';
+      }
+    const filteredBooks = sort(books, value);
     return (
       <div className="App">
         <Sort onChange={this.onChange} value={value}/>

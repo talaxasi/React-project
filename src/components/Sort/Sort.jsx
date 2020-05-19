@@ -6,7 +6,7 @@ const buttons = [
     { value: 'price-low', title: 'Цене (убыванию)' },
     { value: 'author', title: 'Автору' },
     { value: 'title', title: 'Названию' },
-    { value: undefined, title: 'Сброс фильтра' }
+    { value: 'none', title: 'Сброс фильтра' }
 ]
 
 export default function Filter(props) {
