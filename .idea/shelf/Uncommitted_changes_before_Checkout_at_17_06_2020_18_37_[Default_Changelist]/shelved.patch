@@ -1,0 +1,320 @@
+Index: src/components/App/App.jsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\r\nimport './AppPure.css';\r\nimport BookCard from '../Card/Card'\r\nimport Sort from '../Sort/Sort'\r\n\r\nconst sort = (books, filter) => {\r\n  return [...books].sort((a, b) => {\r\n    switch (filter) {\r\n      case 'price-high':\r\n        return a.price - b.price\r\n      case 'price-low':\r\n        return b.price - a.price\r\n      case 'author':\r\n        return a.author.localeCompare(b.author)\r\n      case 'title':\r\n        return a.title.localeCompare(b.title)\r\n      default:\r\n        return books\r\n    }\r\n  })\r\n}\r\n\r\n\r\nclass App extends React.Component {\r\n  constructor(props) {\r\n    super(props);\r\n    this.state = {};\r\n  }\r\n\r\n  componentDidMount() {\r\n\r\n    fetch('/books.json')\r\n      .then(response => response.json())\r\n      .then(data => this.setState({books: data}))\r\n  }\r\n\r\n  onChange = (value) => {\r\n    this.setState({ value });\r\n  }\r\n\r\n  render() {\r\n      const { value, books } = this.state;\r\n      if (!books) {\r\n          return 'Загрузка...';\r\n      }\r\n    const filteredBooks = sort(books, value);\r\n    return (\r\n      <div className=\"App\">\r\n        <Sort onChange={this.onChange} value={value}/>\r\n        {filteredBooks.map(item => <BookCard key={item.id} book={item} />)}\r\n      </div>\r\n    );\r\n  }\r\n}\r\n\r\nexport default App;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/components/App/App.jsx	(revision 922944928e5a8bcd08e2cb6c271b0b2d27aa72a8)
++++ src/components/App/App.jsx	(date 1592404389427)
+@@ -1,56 +1,21 @@
+ import React from 'react';
+-import './AppPure.css';
+-import BookCard from '../Card/Card'
+-import Sort from '../Sort/Sort'
+-
+-const sort = (books, filter) => {
+-  return [...books].sort((a, b) => {
+-    switch (filter) {
+-      case 'price-high':
+-        return a.price - b.price
+-      case 'price-low':
+-        return b.price - a.price
+-      case 'author':
+-        return a.author.localeCompare(b.author)
+-      case 'title':
+-        return a.title.localeCompare(b.title)
+-      default:
+-        return books
+-    }
+-  })
+-}
+-
++import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
++import BooksList from '../BooksList/BooksList';
++import CardDetail from '../CardDetail/CardDetail';
+ 
+ class App extends React.Component {
+-  constructor(props) {
+-    super(props);
+-    this.state = {};
+-  }
+-
+-  componentDidMount() {
+-
+-    fetch('/books.json')
+-      .then(response => response.json())
+-      .then(data => this.setState({books: data}))
+-  }
+-
+-  onChange = (value) => {
+-    this.setState({ value });
+-  }
+-
+-  render() {
+-      const { value, books } = this.state;
+-      if (!books) {
+-          return 'Загрузка...';
+-      }
+-    const filteredBooks = sort(books, value);
+-    return (
+-      <div className="App">
+-        <Sort onChange={this.onChange} value={value}/>
+-        {filteredBooks.map(item => <BookCard key={item.id} book={item} />)}
+-      </div>
+-    );
+-  }
++	render() {
++		return (
++			<Router>
++				<div className='App'>
++					<Switch>
++						<Route path='/' exact component={BooksList} />
++						<Route path='/books/:id' component={CardDetail} />
++					</Switch>
++				</div>
++			</Router>
++		)
++	}
+ }
+ 
+-export default App;
++export default App;
+\ No newline at end of file
+Index: src/components/App/AppPure.css
+===================================================================
+--- src/components/App/AppPure.css	(revision 922944928e5a8bcd08e2cb6c271b0b2d27aa72a8)
++++ src/components/App/AppPure.css	(revision 922944928e5a8bcd08e2cb6c271b0b2d27aa72a8)
+@@ -1,15 +0,0 @@
+-.App {
+-  text-align: center;
+-}
+-
+-.App {
+-  display: flex;
+-  justify-content: start;
+-  flex-wrap: wrap;
+-  align-items: center;
+-
+-  max-width: 1100px;
+-  background-color: rgb(231, 231, 231);
+-
+-  margin: 0 auto;
+-}
+Index: package-lock.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- package-lock.json	(revision 922944928e5a8bcd08e2cb6c271b0b2d27aa72a8)
++++ package-lock.json	(date 1592319275547)
+@@ -5250,9 +5250,9 @@
+       "integrity": "sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc="
+     },
+     "eventemitter3": {
+-      "version": "4.0.0",
+-      "resolved": "https://registry.npmjs.org/eventemitter3/-/eventemitter3-4.0.0.tgz",
+-      "integrity": "sha512-qerSRB0p+UDEssxTtm6EDKcE7W4OaoisfIMl4CngyEhjpYglocpNg6UEqCvemdGhosAsg4sO2dXJOdyBifPGCg=="
++      "version": "4.0.4",
++      "resolved": "https://registry.npmjs.org/eventemitter3/-/eventemitter3-4.0.4.tgz",
++      "integrity": "sha512-rlaVLnVxtxvoyLsQQFBx53YmXHDxRIzzTLbdfxqi4yocpSjAxXwkU0cScM5JgSKMqEhrZpnvQ2D9gjylR0AimQ=="
+     },
+     "events": {
+       "version": "3.1.0",
+@@ -6210,6 +6210,19 @@
+       "resolved": "https://registry.npmjs.org/hex-color-regex/-/hex-color-regex-1.1.0.tgz",
+       "integrity": "sha512-l9sfDFsuqtOqKDsQdqrMRk0U85RZc0RtOR9yPI7mRVOa4FsR/BVnZ0shmQRM96Ji99kYZP/7hn1cedc1+ApsTQ=="
+     },
++    "history": {
++      "version": "4.10.1",
++      "resolved": "https://registry.npmjs.org/history/-/history-4.10.1.tgz",
++      "integrity": "sha512-36nwAD620w12kuzPAsyINPWJqlNbij+hpK1k9XRloDtym8mxzGYl2c17LnV6IAGB2Dmg4tEa7G7DlawS0+qjew==",
++      "requires": {
++        "@babel/runtime": "^7.1.2",
++        "loose-envify": "^1.2.0",
++        "resolve-pathname": "^3.0.0",
++        "tiny-invariant": "^1.0.2",
++        "tiny-warning": "^1.0.0",
++        "value-equal": "^1.0.1"
++      }
++    },
+     "hmac-drbg": {
+       "version": "1.0.1",
+       "resolved": "https://registry.npmjs.org/hmac-drbg/-/hmac-drbg-1.0.1.tgz",
+@@ -6396,9 +6409,9 @@
+       "integrity": "sha1-ksnBN0w1CF912zWexWzCV8u5P6Q="
+     },
+     "http-proxy": {
+-      "version": "1.18.0",
+-      "resolved": "https://registry.npmjs.org/http-proxy/-/http-proxy-1.18.0.tgz",
+-      "integrity": "sha512-84I2iJM/n1d4Hdgc6y2+qY5mDaz2PUVjlg9znE9byl+q0uC3DeByqBGReQu5tpLK0TAqTIXScRUV+dg7+bUPpQ==",
++      "version": "1.18.1",
++      "resolved": "https://registry.npmjs.org/http-proxy/-/http-proxy-1.18.1.tgz",
++      "integrity": "sha512-7mz/721AbnJwIVbnaSv1Cz3Am0ZLT/UBwkC92VlxhXv/k/BBQfM2fXElQNC27BVGr0uwUpplYPQM9LnaBMR5NQ==",
+       "requires": {
+         "eventemitter3": "^4.0.0",
+         "follow-redirects": "^1.0.0",
+@@ -8682,6 +8695,15 @@
+       "resolved": "https://registry.npmjs.org/min-indent/-/min-indent-1.0.0.tgz",
+       "integrity": "sha1-z8RcN+nsDY8KDsPdTvf3w6vjklY="
+     },
++    "mini-create-react-context": {
++      "version": "0.4.0",
++      "resolved": "https://registry.npmjs.org/mini-create-react-context/-/mini-create-react-context-0.4.0.tgz",
++      "integrity": "sha512-b0TytUgFSbgFJGzJqXPKCFCBWigAjpjo+Fl7Vf7ZbKRDptszpppKxXH6DRXEABZ/gcEQczeb0iZ7JvL8e8jjCA==",
++      "requires": {
++        "@babel/runtime": "^7.5.5",
++        "tiny-warning": "^1.0.3"
++      }
++    },
+     "mini-css-extract-plugin": {
+       "version": "0.9.0",
+       "resolved": "https://registry.npmjs.org/mini-css-extract-plugin/-/mini-css-extract-plugin-0.9.0.tgz",
+@@ -11171,6 +11193,52 @@
+         "react-is": "^16.9.0"
+       }
+     },
++    "react-router": {
++      "version": "5.2.0",
++      "resolved": "https://registry.npmjs.org/react-router/-/react-router-5.2.0.tgz",
++      "integrity": "sha512-smz1DUuFHRKdcJC0jobGo8cVbhO3x50tCL4icacOlcwDOEQPq4TMqwx3sY1TP+DvtTgz4nm3thuo7A+BK2U0Dw==",
++      "requires": {
++        "@babel/runtime": "^7.1.2",
++        "history": "^4.9.0",
++        "hoist-non-react-statics": "^3.1.0",
++        "loose-envify": "^1.3.1",
++        "mini-create-react-context": "^0.4.0",
++        "path-to-regexp": "^1.7.0",
++        "prop-types": "^15.6.2",
++        "react-is": "^16.6.0",
++        "tiny-invariant": "^1.0.2",
++        "tiny-warning": "^1.0.0"
++      },
++      "dependencies": {
++        "isarray": {
++          "version": "0.0.1",
++          "resolved": "https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz",
++          "integrity": "sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8="
++        },
++        "path-to-regexp": {
++          "version": "1.8.0",
++          "resolved": "https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-1.8.0.tgz",
++          "integrity": "sha512-n43JRhlUKUAlibEJhPeir1ncUID16QnEjNpwzNdO3Lm4ywrBpBZ5oLD0I6br9evr1Y9JTqwRtAh7JLoOzAQdVA==",
++          "requires": {
++            "isarray": "0.0.1"
++          }
++        }
++      }
++    },
++    "react-router-dom": {
++      "version": "5.2.0",
++      "resolved": "https://registry.npmjs.org/react-router-dom/-/react-router-dom-5.2.0.tgz",
++      "integrity": "sha512-gxAmfylo2QUjcwxI63RhQ5G85Qqt4voZpUXSEqCwykV0baaOTQDR1f0PmY8AELqIyVc0NEZUj0Gov5lNGcXgsA==",
++      "requires": {
++        "@babel/runtime": "^7.1.2",
++        "history": "^4.9.0",
++        "loose-envify": "^1.3.1",
++        "prop-types": "^15.6.2",
++        "react-router": "5.2.0",
++        "tiny-invariant": "^1.0.2",
++        "tiny-warning": "^1.0.0"
++      }
++    },
+     "react-scripts": {
+       "version": "3.4.1",
+       "resolved": "https://registry.npmjs.org/react-scripts/-/react-scripts-3.4.1.tgz",
+@@ -11607,6 +11675,11 @@
+       "resolved": "https://registry.npmjs.org/resolve-from/-/resolve-from-3.0.0.tgz",
+       "integrity": "sha1-six699nWiBvItuZTM17rywoYh0g="
+     },
++    "resolve-pathname": {
++      "version": "3.0.0",
++      "resolved": "https://registry.npmjs.org/resolve-pathname/-/resolve-pathname-3.0.0.tgz",
++      "integrity": "sha512-C7rARubxI8bXFNB/hqcp/4iUeIXJhJZvFPFPiSPRnhU5UPxzMFIl+2E6yY6c4k9giDJAhtV+enfA+G89N6Csng=="
++    },
+     "resolve-url": {
+       "version": "0.2.1",
+       "resolved": "https://registry.npmjs.org/resolve-url/-/resolve-url-0.2.1.tgz",
+@@ -13078,6 +13151,11 @@
+       "resolved": "https://registry.npmjs.org/timsort/-/timsort-0.3.0.tgz",
+       "integrity": "sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q="
+     },
++    "tiny-invariant": {
++      "version": "1.1.0",
++      "resolved": "https://registry.npmjs.org/tiny-invariant/-/tiny-invariant-1.1.0.tgz",
++      "integrity": "sha512-ytxQvrb1cPc9WBEI/HSeYYoGD0kWnGEOR8RY6KomWLBVhqz0RgTwVO9dLrGz7dC+nN9llyI7OKAgRq8Vq4ZBSw=="
++    },
+     "tiny-warning": {
+       "version": "1.0.3",
+       "resolved": "https://registry.npmjs.org/tiny-warning/-/tiny-warning-1.0.3.tgz",
+@@ -13454,6 +13532,11 @@
+         "spdx-expression-parse": "^3.0.0"
+       }
+     },
++    "value-equal": {
++      "version": "1.0.1",
++      "resolved": "https://registry.npmjs.org/value-equal/-/value-equal-1.0.1.tgz",
++      "integrity": "sha512-NOJ6JZCAWr0zlxZt+xqCHNTEKOsrks2HQd4MqhP1qy4z1SkbEP467eNx6TgDKXMvUOb+OENfJCZwM+16n7fRfw=="
++    },
+     "vary": {
+       "version": "1.1.2",
+       "resolved": "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz",
+Index: src/components/Card/Card.jsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import React from 'react';\r\nimport { makeStyles } from '@material-ui/core/styles';\r\nimport Card from '@material-ui/core/Card';\r\nimport CardActionArea from '@material-ui/core/CardActionArea';\r\nimport CardActions from '@material-ui/core/CardActions';\r\nimport CardContent from '@material-ui/core/CardContent';\r\nimport CardMedia from '@material-ui/core/CardMedia';\r\nimport Typography from '@material-ui/core/Typography';\r\n\r\nconst useStyles = makeStyles({\r\n  root: {\r\n    width: 250,\r\n    maxWidth: 250,\r\n    height: 350,\r\n    margin: '10px 1%'\r\n  },\r\n  media: {\r\n    height: 170,\r\n  },\r\n});\r\n\r\nconst BookCard = ({book}) => {\r\n  const classes = useStyles();\r\n  const {image, title, author, price, rating} = book;\r\n\r\n  return (\r\n    <Card className={classes.root}>\r\n      <CardActionArea>\r\n        <CardMedia\r\n          className={classes.media}\r\n          image={image}\r\n          title={title}\r\n        />\r\n        <CardContent>\r\n          <Typography gutterBottom variant=\"h5\" component=\"h2\">\r\n            {author}\r\n          </Typography>\r\n          <Typography variant=\"body2\" color=\"textSecondary\" component=\"p\">\r\n            {title}\r\n          </Typography>\r\n        </CardContent>\r\n      </CardActionArea>\r\n      <CardActions>\r\n        <Typography>\r\n          Цена: {price}\r\n        </Typography>\r\n        <Typography>\r\n          Рейтинг: {rating}\r\n        </Typography>\r\n      </CardActions>\r\n    </Card>\r\n  );\r\n}\r\n\r\nexport default BookCard;
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/components/Card/Card.jsx	(revision 922944928e5a8bcd08e2cb6c271b0b2d27aa72a8)
++++ src/components/Card/Card.jsx	(date 1592397481930)
+@@ -1,4 +1,5 @@
+ import React from 'react';
++import { Link } from 'react-router-dom';
+ import { makeStyles } from '@material-ui/core/styles';
+ import Card from '@material-ui/core/Card';
+ import CardActionArea from '@material-ui/core/CardActionArea';
+@@ -19,9 +20,9 @@
+   },
+ });
+ 
+-const BookCard = ({book}) => {
++const BookCard = ({ book }) => {
+   const classes = useStyles();
+-  const {image, title, author, price, rating} = book;
++  const { image, title, author, price, rating, id } = book;
+ 
+   return (
+     <Card className={classes.root}>
+@@ -32,9 +33,11 @@
+           title={title}
+         />
+         <CardContent>
+-          <Typography gutterBottom variant="h5" component="h2">
+-            {author}
+-          </Typography>
++          <Link to={`/books/${id}`}>
++            <Typography gutterBottom variant="h5" component="h2">
++              {author}
++            </Typography>
++          </Link>
+           <Typography variant="body2" color="textSecondary" component="p">
+             {title}
+           </Typography>
+Index: package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"name\": \"react-project\",\r\n  \"version\": \"0.1.0\",\r\n  \"private\": true,\r\n  \"dependencies\": {\r\n    \"@material-ui/core\": \"^4.9.12\",\r\n    \"@testing-library/jest-dom\": \"^4.2.4\",\r\n    \"@testing-library/react\": \"^9.5.0\",\r\n    \"@testing-library/user-event\": \"^7.2.1\",\r\n    \"react\": \"^16.13.1\",\r\n    \"react-dom\": \"^16.13.1\",\r\n    \"react-redux\": \"^7.2.0\",\r\n    \"react-scripts\": \"3.4.1\",\r\n    \"redux\": \"^4.0.5\",\r\n    \"redux-logger\": \"^3.0.6\",\r\n    \"redux-thunk\": \"^2.3.0\"\r\n  },\r\n  \"scripts\": {\r\n    \"start\": \"react-scripts start\",\r\n    \"build\": \"react-scripts build\",\r\n    \"test\": \"react-scripts test\",\r\n    \"eject\": \"react-scripts eject\"\r\n  },\r\n  \"eslintConfig\": {\r\n    \"extends\": \"react-app\"\r\n  },\r\n  \"browserslist\": {\r\n    \"production\": [\r\n      \">0.2%\",\r\n      \"not dead\",\r\n      \"not op_mini all\"\r\n    ],\r\n    \"development\": [\r\n      \"last 1 chrome version\",\r\n      \"last 1 firefox version\",\r\n      \"last 1 safari version\"\r\n    ]\r\n  }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- package.json	(revision 922944928e5a8bcd08e2cb6c271b0b2d27aa72a8)
++++ package.json	(date 1592319210065)
+@@ -10,6 +10,7 @@
+     "react": "^16.13.1",
+     "react-dom": "^16.13.1",
+     "react-redux": "^7.2.0",
++    "react-router-dom": "^5.2.0",
+     "react-scripts": "3.4.1",
+     "redux": "^4.0.5",
+     "redux-logger": "^3.0.6",

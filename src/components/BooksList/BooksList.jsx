@@ -1,0 +1,56 @@
+import React from 'react';
+import './BooksList.css';
+import BookCard from '../Card/Card';
+import Sort from '../Sort/Sort';
+
+const sort = (books, filter) => {
+  return [...books].sort((a, b) => {
+    switch (filter) {
+      case 'price-high':
+        return a.price - b.price
+      case 'price-low':
+        return b.price - a.price
+      case 'author':
+        return a.author.localeCompare(b.author)
+      case 'title':
+        return a.title.localeCompare(b.title)
+      default:
+        return books
+    }
+  })
+}
+
+
+class BooksList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  componentDidMount() {
+
+    fetch('/books.json')
+      .then(response => response.json())
+      .then(data => this.setState({ books: data }))
+  }
+
+  onChange = (value) => {
+    this.setState({ value });
+  }
+
+  render() {
+    const { value, books } = this.state;
+    if (!books) {
+      return 'Загрузка...';
+    }
+    const filteredBooks = sort(books, value);
+    return (
+        <div className="BooksList">
+          <Sort onChange={this.onChange} value={value} />
+          {filteredBooks.map(item => <BookCard key={item.id} book={item} />)}
+        </div>
+    );
+  }
+}
+
+export default BooksList;
