@@ -27,8 +27,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94e27823-b21e-49d4-bf3f-46d4fee181ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_06_2020_18_37_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_17_06_2020_18_37__Default_Changelist_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +45,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/talaxasi/React-project.git" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1c2Sz6HCB5GGN88THLIBjVuStMP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -58,6 +66,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -75,6 +84,7 @@
       <workItem from="1589903811978" duration="1178000" />
       <workItem from="1589919389695" duration="1072000" />
       <workItem from="1592407861005" duration="492000" />
+      <workItem from="1596052875479" duration="1075000" />
     </task>
     <servers />
   </component>
@@ -129,6 +139,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1589903827381" />
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1596053003660">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1596053003660" />
+    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1596053003659">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1596053003659" />
+    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1596053003657">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1596053003657" />
+    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1596053003659">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1596053003659" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589725688488">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
