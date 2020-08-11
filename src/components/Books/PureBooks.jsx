@@ -24,7 +24,7 @@ const sort = (books, filter) => {
 }
 
 
-class Books extends React.Component {
+class PureBooks extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -34,7 +34,10 @@ class Books extends React.Component {
 
     fetch('http://localhost:3001/books')
       .then(response => response.json())
-      .then(data => this.setState({books: data}))
+      .then(data => {
+        this.setState({books: data});
+        this.props.initBooks(data)
+      })
   }
 
   onChange = (value) => {
@@ -42,6 +45,7 @@ class Books extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     const {value, books} = this.state;
     if (!books) {
       return 'Загрузка...';
@@ -61,4 +65,4 @@ class Books extends React.Component {
   }
 }
 
-export default Books;
+export default PureBooks;

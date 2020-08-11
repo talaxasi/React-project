@@ -1,5 +1,4 @@
 import React from 'react';
-import './Sort.css';
 
 const buttons = [
   {value: 'price-high', title: 'Цене (возрастанию)'},

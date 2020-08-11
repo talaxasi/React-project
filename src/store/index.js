@@ -1,8 +1,10 @@
 import {combineReducers, createStore} from "redux";
 import favoritesReducer from "./favorites/favoritesReducer";
+import booksReducer from "./books/booksReducer";
 
 const rootReducer = combineReducers({
-  favorites: favoritesReducer
+  favorites: favoritesReducer,
+  books: booksReducer
 });
 
 const loadFromLocalSrorage = () => {
