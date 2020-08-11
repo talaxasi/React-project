@@ -4,7 +4,7 @@ import booksReducer from "./books/booksReducer";
 
 const rootReducer = combineReducers({
   favorites: favoritesReducer,
-  books: booksReducer
+  // books: booksReducer
 });
 
 const loadFromLocalSrorage = () => {
@@ -20,7 +20,7 @@ const loadFromLocalSrorage = () => {
 const persistedState = loadFromLocalSrorage();
 
 const store = createStore(rootReducer,
-  persistedState,
+  // persistedState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 export  default  store;

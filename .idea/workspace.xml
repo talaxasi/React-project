@@ -26,12 +26,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94e27823-b21e-49d4-bf3f-46d4fee181ed" name="Default Changelist" comment="">
+    <list default="true" id="94e27823-b21e-49d4-bf3f-46d4fee181ed" name="Default Changelist" comment="add booksReducer">
+      <change afterPath="$PROJECT_DIR$/src/components/Books/Books.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/books/booksActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/books/booksReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Books/Books.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Books/PureBooks.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sort/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort/Sort.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -67,6 +66,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -98,8 +98,18 @@
       <workItem from="1596975493891" duration="1786000" />
       <workItem from="1596977585581" duration="1344000" />
       <workItem from="1596981299057" duration="9559000" />
-      <workItem from="1597154476401" duration="289000" />
+      <workItem from="1597154476401" duration="524000" />
+      <workItem from="1597155107092" duration="1005000" />
+      <workItem from="1597164305365" duration="1226000" />
     </task>
+    <task id="LOCAL-00001" summary="add booksReducer">
+      <created>1597154944069</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597154944069</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,6 +158,10 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add booksReducer" />
+    <option name="LAST_COMMIT_MESSAGE" value="add booksReducer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="593" y="336" key="#File_Watchers" timestamp="1596977652420">
@@ -203,9 +217,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="221" y="88" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1596977638831" />
-    <state x="414" y="217" key="Vcs.Push.Dialog.v2" timestamp="1596395455639">
-      <screen x="0" y="23" width="1440" height="797" />
+    <state x="414" y="219" key="Vcs.Push.Dialog.v2" timestamp="1597155687561">
+      <screen x="0" y="0" width="1440" height="900" />
     </state>
+    <state x="414" y="219" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1597155687561" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1589725688488" />
     <state x="414" y="217" key="Vcs.Push.Dialog.v2/0.23.1440.797@0.23.1440.797" timestamp="1596395455639" />
     <state x="740" y="233" key="git4idea.branch.GitSmartOperationDialog" timestamp="1592408264924">
