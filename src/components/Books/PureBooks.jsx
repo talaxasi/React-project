@@ -34,10 +34,7 @@ class PureBooks extends React.Component {
 
     fetch('http://localhost:3001/books')
       .then(response => response.json())
-      .then(data => {
-        this.setState({books: data});
-        this.props.initBooks(data)
-      })
+      .then(data => this.props.initBooks(data))
   }
 
   onChange = (value) => {
@@ -45,8 +42,8 @@ class PureBooks extends React.Component {
   }
 
   render() {
-    console.log(this.props);
-    const {value, books} = this.state;
+    const {value} = this.state;
+    const {books} = this.props;
     if (!books) {
       return 'Загрузка...';
     }

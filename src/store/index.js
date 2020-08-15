@@ -4,7 +4,7 @@ import booksReducer from "./books/booksReducer";
 
 const rootReducer = combineReducers({
   favorites: favoritesReducer,
-  // books: booksReducer
+  books: booksReducer
 });
 
 const loadFromLocalSrorage = () => {

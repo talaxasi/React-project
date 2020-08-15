@@ -12,9 +12,9 @@ class App extends React.Component {
       <Router>
         <div className='App'>
           <Switch>
-            <Route path="/books" exact component={Books}/>
-            <Route path="/books/:id" component={RouterCard}/>
-            <Route path="/favorites" exact component={Favorites}/>
+            <Route path="/" exact component={Books}/>
+            <Route path="/:id" component={RouterCard}/>
+            <Route path="/favorites"  component={Favorites}/>
           </Switch>
         </div>
       </Router>

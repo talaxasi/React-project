@@ -27,6 +27,8 @@ const RouterCard = (props) => {
   const classes = useStyles();
   const [item, setItem] = useState({});
 
+  console.log(props)
+
   useEffect(() => {
     fetch(`http://localhost:3001/books/${+props.match.params.id}`)
     .then(response => response.json())
@@ -62,7 +64,7 @@ const {image, title, author, price, rating} = item.book;
           Рейтинг: {rating}
         </Typography>
       </CardActions>
-      <Link to={'/books'}>
+      <Link to={'/'}>
       <button>К списку книг</button>
       </Link>
     </Card>

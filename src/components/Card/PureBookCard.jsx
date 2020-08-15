@@ -31,7 +31,7 @@ const PureBookCard = ({props}) => {
   return (
     <Card className={classes.root}>
       <CardActionArea>
-        <Link to={`/books/${id}`}>
+        <Link to={`/${id}`}>
           <CardMedia
             className={classes.media}
             image={image}
