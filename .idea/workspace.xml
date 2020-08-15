@@ -26,16 +26,7 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94e27823-b21e-49d4-bf3f-46d4fee181ed" name="Default Changelist" comment="add booksReducer">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Books/PureBooks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Books/PureBooks.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/PureBookCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/PureBookCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Favorites/PureFavorites.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Favorites/PureFavorites.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RouterPages/RouterCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouterPages/RouterCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/books/booksReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/books/booksReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="94e27823-b21e-49d4-bf3f-46d4fee181ed" name="Default Changelist" comment="dont work router favorites" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -105,6 +96,7 @@
       <workItem from="1597155107092" duration="1005000" />
       <workItem from="1597164305365" duration="1988000" />
       <workItem from="1597496408267" duration="8433000" />
+      <workItem from="1597514029118" duration="461000" />
     </task>
     <task id="LOCAL-00001" summary="add booksReducer">
       <created>1597154944069</created>
@@ -120,7 +112,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597165714392</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="dont work router favorites">
+      <created>1597514183507</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1597514183507</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -172,7 +171,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add booksReducer" />
-    <option name="LAST_COMMIT_MESSAGE" value="add booksReducer" />
+    <MESSAGE value="dont work router favorites" />
+    <option name="LAST_COMMIT_MESSAGE" value="dont work router favorites" />
   </component>
   <component name="WindowStateProjectService">
     <state x="593" y="336" key="#File_Watchers" timestamp="1596977652420">
