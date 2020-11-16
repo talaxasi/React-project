@@ -26,7 +26,25 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94e27823-b21e-49d4-bf3f-46d4fee181ed" name="Default Changelist" comment="dont work router favorites" />
+    <list default="true" id="94e27823-b21e-49d4-bf3f-46d4fee181ed" name="Default Changelist" comment="dont work router favorites">
+      <change afterPath="$PROJECT_DIR$/src/components/ButtonFavorites/ButtonFavorites.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Sort/Sort.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/bookId/bookIdActions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/bookId/bookIdReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Books/Books.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Books/Books.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Books/Books.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Books/Books.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Books/PureBooks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Books/PureBooks.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ButtonFavorites/ButtonFavorites.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonFavorites/ButtonFavorites.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Favorites/Favorites.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Favorites/Favorites.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Favorites/Favorites.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Favorites/Favorites.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Favorites/PureFavorites.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Favorites/PureFavorites.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RouterPages/RouterCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouterPages/CardPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Sort/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort/Sort.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/favorites/favoritesReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/favorites/favoritesReducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +68,7 @@
   </component>
   <component name="ProjectId" id="1c2Sz6HCB5GGN88THLIBjVuStMP" />
   <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="1" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -67,7 +85,7 @@
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -96,7 +114,16 @@
       <workItem from="1597155107092" duration="1005000" />
       <workItem from="1597164305365" duration="1988000" />
       <workItem from="1597496408267" duration="8433000" />
-      <workItem from="1597514029118" duration="461000" />
+      <workItem from="1597514029118" duration="1144000" />
+      <workItem from="1597575689059" duration="5438000" />
+      <workItem from="1603462977993" duration="541000" />
+      <workItem from="1604060007562" duration="9177000" />
+      <workItem from="1604500827067" duration="1560000" />
+      <workItem from="1604756196512" duration="6029000" />
+      <workItem from="1604838050980" duration="6895000" />
+      <workItem from="1605437667367" duration="167000" />
+      <workItem from="1605454212217" duration="5555000" />
+      <workItem from="1605529251633" duration="5337000" />
     </task>
     <task id="LOCAL-00001" summary="add booksReducer">
       <created>1597154944069</created>
@@ -119,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597514183507</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="dont work router favorites">
+      <created>1597514505036</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1597514505036</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,68 +213,33 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="593" y="336" key="#File_Watchers/0.0.1440.900@0.0.1440.900" timestamp="1596977652420" />
-    <state x="698" y="229" key="#JavaScript" timestamp="1589889969030">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="698" y="229" key="#JavaScript/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1589889969030" />
     <state x="311" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596981268735">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="311" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1596981268735" />
-    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1589903827381" />
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596978090011">
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605456138514">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1596978090011" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605456138514" />
     <state x="372" y="235" key="EditFileWatcherDialog" timestamp="1596977504744">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="372" y="235" key="EditFileWatcherDialog/0.0.1440.900@0.0.1440.900" timestamp="1596977504744" />
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom" timestamp="1596056182828">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1596053003660" />
-    <state width="1419" height="245" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1596056182828" />
-    <state width="1419" height="245" key="GridCell.Tab.0.center" timestamp="1596056182827">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1596053003659" />
-    <state width="1419" height="245" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1596056182827" />
-    <state width="1419" height="245" key="GridCell.Tab.0.left" timestamp="1596056182826">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1596053003657" />
-    <state width="1419" height="245" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1596056182826" />
-    <state width="1419" height="245" key="GridCell.Tab.0.right" timestamp="1596056182827">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state width="1419" height="245" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1596053003659" />
-    <state width="1419" height="245" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1596056182827" />
-    <state x="144" y="92" key="MergeDialog" timestamp="1596395303534">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state x="144" y="92" key="MergeDialog/0.23.1440.797@0.23.1440.797" timestamp="1596395303534" />
-    <state x="358" y="190" key="MultipleFileMergeDialog" timestamp="1596395327298">
-      <screen x="0" y="23" width="1440" height="797" />
-    </state>
-    <state x="358" y="190" key="MultipleFileMergeDialog/0.23.1440.797@0.23.1440.797" timestamp="1596395327298" />
-    <state x="221" y="88" key="SettingsEditor" timestamp="1596977638831">
+    <state x="221" y="88" key="SettingsEditor" timestamp="1605456069020">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="221" y="88" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1596977638831" />
-    <state x="414" y="219" key="Vcs.Push.Dialog.v2" timestamp="1597165743674">
+    <state x="221" y="88" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605456069020" />
+    <state x="414" y="219" key="Vcs.Push.Dialog.v2" timestamp="1597514522618">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="414" y="219" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1597165743674" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1589725688488" />
-    <state x="414" y="217" key="Vcs.Push.Dialog.v2/0.23.1440.797@0.23.1440.797" timestamp="1596395455639" />
-    <state x="740" y="233" key="git4idea.branch.GitSmartOperationDialog" timestamp="1592408264924">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="233" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1592408264924" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1596977632162">
+    <state x="414" y="219" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1597514522618" />
+    <state x="385" y="210" key="run.anything.popup" timestamp="1604063416837">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1596977632162" />
+    <state x="385" y="210" key="run.anything.popup/0.0.1440.900@0.0.1440.900" timestamp="1604063416837" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1605456059191">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1605456059191" />
   </component>
 </project>

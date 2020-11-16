@@ -1,8 +1,7 @@
 .Books {
   width: 100%;
   display: flex;
-  justify-content: start;
-  flex-wrap: wrap;
+  flex-direction: column;
   margin-left: 1%;
 }
 
@@ -10,4 +9,12 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
+}
+
+.favorites {
+  margin: 5px 0 5px;
+}
+
+.link-favorites {
+  max-width: 105px;
 }

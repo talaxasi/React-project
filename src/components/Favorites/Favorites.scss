@@ -1,6 +1,41 @@
 .favoriteBooks {
   display: flex;
-  button {
-    margin-left: 10px;
+  justify-content: flex-start;
+  padding: 15px 0;
+}
+
+.favoriteBooks-item {
+  display: flex;
+  flex-direction: column;
+  max-width: 150px;
+  margin: 0 10px;
+  padding: 5px;
+  align-items: center;
+
+  border: 1px solid black;
+  border-radius: 5px;
+
+  p {
+    text-align: center;
   }
+
+  h3 {
+    width: 100%;
+    margin: 3px 0;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }

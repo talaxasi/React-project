@@ -1,4 +1,5 @@
 import React from 'react';
+import './Sort.scss';
 
 const buttons = [
   {value: 'price-high', title: 'Цене (возрастанию)'},
@@ -15,7 +16,7 @@ export default function Filter(props) {
   return (
     < div className='filter-group'>
       <p>Сортировать по:</p>
-      <div className="buttons">
+      <div className="buttons-favorite">
         {buttons.map(btn => (
           <button
             className={value === btn.value

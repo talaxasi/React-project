@@ -4,8 +4,6 @@ import BookCard from "../Card/BookCard";
 import Sort from '../Sort/Sort';
 import './Books.css';
 
-import ButtonFavorites from "../ButtonFavorites/ButtonFavorites";
-
 const sort = (books, filter) => {
   return [...books].sort((a, b) => {
     switch (filter) {
@@ -34,7 +32,9 @@ class PureBooks extends React.Component {
 
     fetch('http://localhost:3001/books')
       .then(response => response.json())
-      .then(data => this.props.initBooks(data))
+      .then(data => {
+        this.props.initBooks(data);
+        this.props.initBookId(data)})
   }
 
   onChange = (value) => {
@@ -51,8 +51,10 @@ class PureBooks extends React.Component {
     return (
       <div className="Books">
         <Sort onChange={this.onChange} value={value}/>
-        <Link to={'/favorites'}>
-          <button>Избранное &#128293;</button>
+        <Link className={"link-favorites"} to={'/favorites'}>
+          <button className={"favorites"}>
+            Избранное &#128293;
+          </button>
         </Link>
         <div className="booksList">
           {filteredBooks.map(item => <BookCard key={item.id} bookCard={item}/>)}

@@ -2,7 +2,7 @@ import React from 'react';
 import '../Books/Books';
 import Books from '../Books/Books';
 import Favorites from "../Favorites/Favorites";
-import RouterCard from '../RouterPages/RouterCard';
+import CardPage from '../RouterPages/CardPage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
@@ -13,8 +13,8 @@ class App extends React.Component {
         <div className='App'>
           <Switch>
             <Route path="/" exact component={Books}/>
-            <Route path="/:id" component={RouterCard}/>
             <Route path="/favorites"  component={Favorites}/>
+            <Route path="/:id" component={CardPage}/>
           </Switch>
         </div>
       </Router>

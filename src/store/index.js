@@ -1,26 +1,24 @@
-import {combineReducers, createStore} from "redux";
+import {combineReducers, createStore, applyMiddleware, compose} from "redux";
+import reduxThunk from 'redux-thunk';
+
 import favoritesReducer from "./favorites/favoritesReducer";
 import booksReducer from "./books/booksReducer";
+import bookIdReducer from "./bookId/bookIdReducer";
 
 const rootReducer = combineReducers({
   favorites: favoritesReducer,
-  books: booksReducer
+  books: booksReducer,
+  bookId: bookIdReducer
 });
 
-const loadFromLocalSrorage = () => {
-  try{
-    const locStore = localStorage.getItem('localStore');
-    if(!locStore) return undefined;
-    return JSON.parse(locStore)
-  }catch (e) {
-    console.log('loadFromLocalStorage', e)
-  }
-}
-
-const persistedState = loadFromLocalSrorage();
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(rootReducer,
-  // persistedState,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+  composeEnhancers(
+    applyMiddleware(
+      reduxThunk
+    )
+  )
+);
 
 export  default  store;

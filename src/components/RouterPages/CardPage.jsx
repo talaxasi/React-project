@@ -23,11 +23,9 @@ const useStyles = makeStyles({
   },
 });
 
-const RouterCard = (props) => {
+const CardPage = (props) => {
   const classes = useStyles();
   const [item, setItem] = useState({});
-
-  console.log(props)
 
   useEffect(() => {
     fetch(`http://localhost:3001/books/${+props.match.params.id}`)
@@ -71,4 +69,4 @@ const {image, title, author, price, rating} = item.book;
   );
 }
 
-export default RouterCard;
+export default CardPage;
