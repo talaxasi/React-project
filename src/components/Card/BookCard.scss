@@ -1,0 +1,13 @@
+.bookCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 250px;
+  max-width: 250px;
+  height: 400px;
+  margin: 10px 1%;
+}
+
+.cardMedia {
+  height: 170px;
+}

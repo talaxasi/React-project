@@ -14,20 +14,21 @@
 
   border: 1px solid black;
   border-radius: 5px;
-
-  p {
-    text-align: center;
-  }
-
-  h3 {
-    width: 100%;
-    margin: 3px 0;
-    text-align: center;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
 }
+
+.favoriteBooks-item__p {
+  text-align: center;
+}
+
+.favoriteBooks-item__h3 {
+  width: 100%;
+  margin: 3px 0;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 
 .image {
   width: 150px;

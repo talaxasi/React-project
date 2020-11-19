@@ -26,24 +26,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="94e27823-b21e-49d4-bf3f-46d4fee181ed" name="Default Changelist" comment="dont work router favorites">
-      <change afterPath="$PROJECT_DIR$/src/components/ButtonFavorites/ButtonFavorites.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Sort/Sort.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/bookId/bookIdActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/bookId/bookIdReducer.js" afterDir="false" />
+    <list default="true" id="94e27823-b21e-49d4-bf3f-46d4fee181ed" name="Default Changelist" comment="fix mistakes">
+      <change afterPath="$PROJECT_DIR$/src/components/Card/BookCard.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/App/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Books/Books.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Books/Books.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Books/Books.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Books/Books.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Books/PureBooks.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Books/PureBooks.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ButtonFavorites/ButtonFavorites.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonFavorites/ButtonFavorites.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/BookCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/BookCard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card/PureBookCard.jsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Favorites/Favorites.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Favorites/Favorites.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Favorites/Favorites.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Favorites/Favorites.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Favorites/PureFavorites.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Favorites/PureFavorites.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RouterPages/RouterCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouterPages/CardPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Sort/Sort.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Sort/Sort.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/favorites/favoritesReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/favorites/favoritesReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Favorites/PureFavorites.jsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +113,8 @@
       <workItem from="1604838050980" duration="6895000" />
       <workItem from="1605437667367" duration="167000" />
       <workItem from="1605454212217" duration="5555000" />
-      <workItem from="1605529251633" duration="5337000" />
+      <workItem from="1605529251633" duration="5842000" />
+      <workItem from="1605797466516" duration="5239000" />
     </task>
     <task id="LOCAL-00001" summary="add booksReducer">
       <created>1597154944069</created>
@@ -153,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597514505036</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix mistakes">
+      <created>1605537924838</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1605537924838</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -206,33 +204,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add booksReducer" />
     <MESSAGE value="dont work router favorites" />
-    <option name="LAST_COMMIT_MESSAGE" value="dont work router favorites" />
+    <MESSAGE value="fix mistakes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix mistakes" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="593" y="336" key="#File_Watchers" timestamp="1596977652420">
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605800922633">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="593" y="336" key="#File_Watchers/0.0.1440.900@0.0.1440.900" timestamp="1596977652420" />
-    <state x="311" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596981268735">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="311" y="151" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1596981268735" />
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605456138514">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605456138514" />
-    <state x="372" y="235" key="EditFileWatcherDialog" timestamp="1596977504744">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="372" y="235" key="EditFileWatcherDialog/0.0.1440.900@0.0.1440.900" timestamp="1596977504744" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605800922633" />
     <state x="221" y="88" key="SettingsEditor" timestamp="1605456069020">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="221" y="88" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1605456069020" />
-    <state x="414" y="219" key="Vcs.Push.Dialog.v2" timestamp="1597514522618">
+    <state x="414" y="219" key="Vcs.Push.Dialog.v2" timestamp="1605537935512">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="414" y="219" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1597514522618" />
+    <state x="414" y="219" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1605537935512" />
     <state x="385" y="210" key="run.anything.popup" timestamp="1604063416837">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
