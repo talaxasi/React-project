@@ -23,7 +23,7 @@ const useStyles = makeStyles({
   },
 });
 
-const CardPage = (props) => {
+const BookPage = (props) => {
   const classes = useStyles();
   const [item, setItem] = useState({});
 
@@ -69,4 +69,4 @@ const {image, title, author, price, rating} = item.book;
   );
 }
 
-export default CardPage;
+export default BookPage;

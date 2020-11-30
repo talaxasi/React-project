@@ -3,7 +3,8 @@ import './ButtonFavorites.scss';
 
 const ButtonFavorites = ({props}) => {
   const {bookCard} = props;
-  const isFavorite = props.favoriteBooks.some((book) => book === bookCard.id);
+  const favoriteBooks = props.favoriteBooks;
+  const isFavorite = favoriteBooks.some((book) => book === bookCard.id);
 
   if (isFavorite) return (
     <button className={"delete-from-favorites"}

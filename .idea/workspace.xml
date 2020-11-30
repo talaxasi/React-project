@@ -27,13 +27,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="94e27823-b21e-49d4-bf3f-46d4fee181ed" name="Default Changelist" comment="fix mistakes">
-      <change afterPath="$PROJECT_DIR$/src/components/Card/BookCard.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/BookCard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card/BookCard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card/PureBookCard.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Favorites/Favorites.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Favorites/Favorites.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Favorites/Favorites.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Favorites/Favorites.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Favorites/PureFavorites.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Books/Books.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Books/Books.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ButtonFavorites/ButtonFavorites.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonFavorites/ButtonFavorites.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/RouterPages/CardPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RouterPages/BookPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/favorites/favoritesReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/favorites/favoritesReducer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +77,9 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -115,6 +118,8 @@
       <workItem from="1605454212217" duration="5555000" />
       <workItem from="1605529251633" duration="5842000" />
       <workItem from="1605797466516" duration="5239000" />
+      <workItem from="1606245988791" duration="125000" />
+      <workItem from="1606744014936" duration="1795000" />
     </task>
     <task id="LOCAL-00001" summary="add booksReducer">
       <created>1597154944069</created>
@@ -155,7 +160,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -212,6 +217,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605800922633" />
+    <state x="372" y="235" key="EditFileWatcherDialog" timestamp="1606744425002">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="372" y="235" key="EditFileWatcherDialog/0.0.1440.900@0.0.1440.900" timestamp="1606744425002" />
     <state x="221" y="88" key="SettingsEditor" timestamp="1605456069020">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

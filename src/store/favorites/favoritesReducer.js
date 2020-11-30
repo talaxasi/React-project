@@ -21,7 +21,7 @@ const loadLocalStoreFavorites = key => {
   }
 }
 
-const favoritesReducer = (state = loadLocalStoreFavorites('favorites'), action) => {
+const favoritesReducer = (state = loadLocalStoreFavorites('favorites') || [], action) => {
   switch (action.type) {
     case SET_FAVORITE_BOOK:
       const setFavoriteBook = [
